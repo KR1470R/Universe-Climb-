@@ -1,0 +1,18 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Free_Cartoon_Land_2.obj-1f736eec04ce749fd5b1594cae3140e6.mesh"
+
+[deps]
+
+files=[ "res://.import/Free_Cartoon_Land_2.obj-1f736eec04ce749fd5b1594cae3140e6.mesh" ]
+
+source_file="res://models/map/mountain/Free_Cartoon_Land_2.obj"
+dest_files=[ "res://.import/Free_Cartoon_Land_2.obj-1f736eec04ce749fd5b1594cae3140e6.mesh", "res://.import/Free_Cartoon_Land_2.obj-1f736eec04ce749fd5b1594cae3140e6.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+optimize_mesh=true
