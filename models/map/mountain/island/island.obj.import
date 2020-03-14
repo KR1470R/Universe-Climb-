@@ -1,0 +1,18 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/island.obj-82b52ff2e0f6c30321b03db160a5367a.mesh"
+
+[deps]
+
+files=[ "res://.import/island.obj-82b52ff2e0f6c30321b03db160a5367a.mesh" ]
+
+source_file="res://models/map/mountain/island/island.obj"
+dest_files=[ "res://.import/island.obj-82b52ff2e0f6c30321b03db160a5367a.mesh", "res://.import/island.obj-82b52ff2e0f6c30321b03db160a5367a.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+optimize_mesh=true

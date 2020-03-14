@@ -20,12 +20,13 @@ func _ready():
 
 func _physics_process(delta):
 	location = Vector3(0,0,0)
+	
 	if Input.is_action_pressed("ui_accept"):
 		velocity.y += 1
 	elif Input.is_action_pressed("ui_left"):
-		velocity.z -= 1
+		velocity.x += 1
 	elif Input.is_action_pressed("ui_right"):
-		velocity.z += 1
+		velocity.x -= 1
 	location = location.normalized()
 	location = location*speed*delta
 	

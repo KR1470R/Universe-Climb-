@@ -1,71 +1,88 @@
-[gd_scene load_steps=34 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://scripts/Main.gd" type="Script" id=1]
-[ext_resource path="res://models/map/rocket_pad/rocket_pad.obj" type="ArrayMesh" id=2]
-[ext_resource path="res://models/map/rocket_pad/Material_001.material" type="Material" id=3]
-[ext_resource path="res://models/map/rocket_pad/Material_002.material" type="Material" id=4]
-[ext_resource path="res://models/map/rocket_pad/Material_003.material" type="Material" id=5]
-[ext_resource path="res://models/map/rocket_pad/Material_004.material" type="Material" id=6]
-[ext_resource path="res://models/map/rocket_pad/Material_005.material" type="Material" id=7]
-[ext_resource path="res://models/map/rocket_pad/Material_006.material" type="Material" id=8]
-[ext_resource path="res://models/map/rocket_pad/Material_007.material" type="Material" id=9]
-[ext_resource path="res://models/map/rocket_pad/Material_008.material" type="Material" id=10]
-[ext_resource path="res://models/map/rocket_pad/Material_009.material" type="Material" id=11]
-[ext_resource path="res://models/map/rocket_pad/Material_010.material" type="Material" id=12]
-[ext_resource path="res://models/map/rocket_pad/Material_011.material" type="Material" id=13]
-[ext_resource path="res://models/map/rocket_pad/Material_012.material" type="Material" id=14]
-[ext_resource path="res://models/map/rocket_pad/Material_013.material" type="Material" id=15]
-[ext_resource path="res://models/map/rocket_pad/Material_014.material" type="Material" id=16]
-[ext_resource path="res://models/map/mountain/Free_Cartoon_Land_2.obj" type="ArrayMesh" id=17]
-[ext_resource path="res://scripts/rocket_model.gd" type="Script" id=18]
-[ext_resource path="res://models/rockets/basic_rocket/rocket_model.obj" type="ArrayMesh" id=19]
-[ext_resource path="res://models/rockets/basic_rocket/metal (8).jpg" type="Texture" id=20]
-[ext_resource path="res://models/map/envirsonmenttexture/texture2.jpg" type="Texture" id=21]
+[ext_resource path="res://models/map/mountain/island/Low Poly Mill.dae" type="PackedScene" id=2]
+[ext_resource path="res://scripts/rocket_model.gd" type="Script" id=3]
+[ext_resource path="res://models/rockets/basic_rocket/rocket_model.obj" type="ArrayMesh" id=4]
+[ext_resource path="res://models/rockets/basic_rocket/metal (8).jpg" type="Texture" id=5]
 
-[sub_resource type="PhysicsMaterial" id=12]
-
-[sub_resource type="BoxShape" id=1]
-extents = Vector3( 35.6581, 1, 38.9129 )
+[sub_resource type="PhysicsMaterial" id=1]
 
 [sub_resource type="BoxShape" id=2]
-extents = Vector3( 36.105, 16.0728, 1.23621 )
+extents = Vector3( 10.0102, 1, 10.8402 )
 
-[sub_resource type="SpatialMaterial" id=3]
-albedo_color = Color( 1, 0.239216, 0.239216, 1 )
-albedo_texture = ExtResource( 20 )
+[sub_resource type="BoxShape" id=3]
+extents = Vector3( 36.105, 16.0728, 1.23621 )
 
 [sub_resource type="SpatialMaterial" id=4]
 albedo_color = Color( 1, 0.239216, 0.239216, 1 )
-albedo_texture = ExtResource( 20 )
+albedo_texture = ExtResource( 5 )
 
 [sub_resource type="SpatialMaterial" id=5]
-albedo_color = Color( 0.870588, 0.870588, 0.870588, 1 )
+albedo_color = Color( 1, 0.239216, 0.239216, 1 )
+albedo_texture = ExtResource( 5 )
 
 [sub_resource type="SpatialMaterial" id=6]
-albedo_color = Color( 0.227451, 0.564706, 1, 1 )
-albedo_texture = ExtResource( 20 )
+albedo_color = Color( 0.870588, 0.870588, 0.870588, 1 )
 
 [sub_resource type="SpatialMaterial" id=7]
-albedo_color = Color( 1, 0.239216, 0.239216, 1 )
-albedo_texture = ExtResource( 20 )
+albedo_color = Color( 0.227451, 0.564706, 1, 1 )
+albedo_texture = ExtResource( 5 )
 
 [sub_resource type="SpatialMaterial" id=8]
-albedo_color = Color( 0.227451, 0.564706, 1, 1 )
-albedo_texture = ExtResource( 20 )
+albedo_color = Color( 1, 0.239216, 0.239216, 1 )
+albedo_texture = ExtResource( 5 )
 
-[sub_resource type="BoxShape" id=9]
+[sub_resource type="SpatialMaterial" id=9]
+albedo_color = Color( 0.227451, 0.564706, 1, 1 )
+albedo_texture = ExtResource( 5 )
+
+[sub_resource type="BoxShape" id=10]
 extents = Vector3( 1, 1.71808, 1 )
 
-[sub_resource type="PanoramaSky" id=13]
-panorama = ExtResource( 21 )
+[sub_resource type="ProceduralSky" id=13]
+sky_top_color = Color( 0.737255, 0.282353, 0.784314, 1 )
+sky_horizon_color = Color( 1, 0.745098, 0.286275, 1 )
+sky_energy = 2.0
+ground_bottom_color = Color( 0.109804, 0.243137, 0.54902, 1 )
+ground_horizon_color = Color( 1, 0.501961, 0, 1 )
 
-[sub_resource type="Environment" id=11]
+[sub_resource type="Environment" id=12]
 background_mode = 2
 background_sky = SubResource( 13 )
+background_color = Color( 0.376471, 0.854902, 0.898039, 1 )
 dof_blur_far_enabled = true
 dof_blur_far_quality = 0
 dof_blur_near_quality = 2
 glow_intensity = 5.77
+
+[sub_resource type="Animation" id=14]
+resource_name = "launch"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Rocket:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 3 ),
+"transitions": PoolRealArray( 1, 3.605, 0.108819 ),
+"update": 0,
+"values": [ Vector3( 0.890323, -0.743116, 8.17991 ), Vector3( 0.890323, -0.743116, 8.17991 ), Vector3( 0.89, 30, 8.18 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Rocket/camera:translation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( -0.0990066, 1.98753, -4.85589 ), Vector3( -2.20977, 1.98753, -4.97007 ), Vector3( 0.566276, 1.98753, -4.8199 ), Vector3( -3.02345, 1.98753, -5.01409 ), Vector3( 0.0914466, 1.98753, -4.84559 ), Vector3( -0.628495, 1.98753, -4.88454 ) ]
+}
 
 [node name="Main" type="Spatial"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.42459, 0 )
@@ -79,217 +96,64 @@ light_energy = 1.69
 shadow_enabled = true
 
 [node name="Map" type="StaticBody" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.03374, -2.68816, 18.5064 )
-physics_material_override = SubResource( 12 )
+transform = Transform( 0.937112, 0, 0.174515, 0, 1, 0, -0.34903, 0, 0.468556, 3.254, -2.688, 18.406 )
+physics_material_override = SubResource( 1 )
 
 [node name="floor_shape" type="CollisionShape" parent="Map"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.196599, 0, -18.1575 )
-shape = SubResource( 1 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.196599, 1.19414, -18.1575 )
+shape = SubResource( 2 )
 
 [node name="wall_shape-z1" type="CollisionShape" parent="Map"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.573009, 13.5084, -54.6472 )
-shape = SubResource( 2 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.1886, 13.4696, -24.0822 )
+shape = SubResource( 3 )
 
 [node name="wall_shape-z2" type="CollisionShape" parent="Map"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.573009, 13.5084, 15.8518 )
-shape = SubResource( 2 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.59763, 13.5084, -11.9135 )
+shape = SubResource( 3 )
 
 [node name="wall_shape-x1" type="CollisionShape" parent="Map"]
-transform = Transform( -0.0184869, 0, 0.999829, 0, 1, 0, -0.999829, 0, -0.0184869, 33.0884, 13.5084, -21.4497 )
-shape = SubResource( 2 )
+transform = Transform( -0.0184869, 0, 0.999829, 0, 1, 0, -0.999829, 0, -0.0184869, 7.28354, 13.5084, -40.6719 )
+shape = SubResource( 3 )
 
 [node name="wall_shape-x2" type="CollisionShape" parent="Map"]
-transform = Transform( -0.0184869, 0, 0.999829, 0, 1, 0, -0.999829, 0, -0.0184869, -31.3195, 13.5084, -21.4497 )
-shape = SubResource( 2 )
+transform = Transform( -0.0184869, 0, 0.999829, 0, 1, 0, -0.999829, 0, -0.0184869, -5.4481, 13.5084, -11.1299 )
+shape = SubResource( 3 )
 
-[node name="rocket_pad2" type="MeshInstance" parent="Map"]
-transform = Transform( -0.199546, 0, -0.0134637, 0, 0.342721, 0, 0.0134637, 0, -0.199546, -1.275, 0.25, -27.421 )
-mesh = ExtResource( 2 )
-material/0 = ExtResource( 3 )
-material/1 = ExtResource( 4 )
-material/2 = ExtResource( 5 )
-material/3 = ExtResource( 6 )
-material/4 = ExtResource( 7 )
-material/5 = ExtResource( 8 )
-material/6 = ExtResource( 9 )
-material/7 = ExtResource( 10 )
-material/8 = ExtResource( 11 )
-material/9 = ExtResource( 12 )
-material/10 = ExtResource( 13 )
-material/11 = ExtResource( 14 )
-material/12 = ExtResource( 15 )
-material/13 = ExtResource( 16 )
-material/14 = ExtResource( 16 )
-material/15 = ExtResource( 16 )
-material/16 = ExtResource( 16 )
-material/17 = ExtResource( 16 )
-material/18 = ExtResource( 16 )
-material/19 = ExtResource( 16 )
-material/20 = ExtResource( 16 )
-material/21 = ExtResource( 16 )
-material/22 = ExtResource( 16 )
-material/23 = ExtResource( 16 )
-material/24 = ExtResource( 16 )
-material/25 = ExtResource( 16 )
-material/26 = ExtResource( 16 )
-material/27 = ExtResource( 16 )
-material/28 = ExtResource( 16 )
-material/29 = ExtResource( 16 )
-material/30 = ExtResource( 16 )
-material/31 = ExtResource( 16 )
-
-[node name="landscape" type="MeshInstance" parent="Map"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.255, 0, -18.739 )
-mesh = ExtResource( 17 )
-material/0 = null
-material/1 = null
-material/2 = null
-material/3 = null
-material/4 = null
-material/5 = null
-material/6 = null
-material/7 = null
-material/8 = null
-material/9 = null
-material/10 = null
-material/11 = null
-material/12 = null
-material/13 = null
-material/14 = null
-material/15 = null
-material/16 = null
-material/17 = null
-material/18 = null
-material/19 = null
-material/20 = null
-material/21 = null
-material/22 = null
-material/23 = null
-material/24 = null
-material/25 = null
-material/26 = null
-material/27 = null
-material/28 = null
-material/29 = null
-material/30 = null
-material/31 = null
-material/32 = null
-material/33 = null
-material/34 = null
-material/35 = null
-material/36 = null
-material/37 = null
-material/38 = null
-material/39 = null
-material/40 = null
-material/41 = null
-material/42 = null
-material/43 = null
-material/44 = null
-material/45 = null
-material/46 = null
-material/47 = null
-material/48 = null
-material/49 = null
-material/50 = null
-material/51 = null
-material/52 = null
-material/53 = null
-material/54 = null
-material/55 = null
-material/56 = null
-material/57 = null
-material/58 = null
-material/59 = null
-material/60 = null
-material/61 = null
-material/62 = null
-material/63 = null
-material/64 = null
-material/65 = null
-material/66 = null
-material/67 = null
-material/68 = null
-material/69 = null
-material/70 = null
-material/71 = null
-material/72 = null
-material/73 = null
-material/74 = null
-material/75 = null
-material/76 = null
-material/77 = null
-material/78 = null
-material/79 = null
-material/80 = null
-material/81 = null
-material/82 = null
-material/83 = null
-material/84 = null
-material/85 = null
-material/86 = null
-material/87 = null
-material/88 = null
-material/89 = null
-material/90 = null
-material/91 = null
-material/92 = null
-material/93 = null
-material/94 = null
-material/95 = null
-material/96 = null
-material/97 = null
-material/98 = null
-material/99 = null
-material/100 = null
-material/101 = null
-material/102 = null
-material/103 = null
-material/104 = null
-material/105 = null
-material/106 = null
-material/107 = null
-material/108 = null
-material/109 = null
-material/110 = null
-material/111 = null
-material/112 = null
-material/113 = null
-material/114 = null
-material/115 = null
-material/116 = null
-material/117 = null
-material/118 = null
-material/119 = null
+[node name="Low Poly Mill" parent="Map" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0387936, -0.0456753, -18.9535 )
 
 [node name="Rocket" type="KinematicBody" parent="."]
-transform = Transform( -0.0271266, 0, 0.499264, 0, 0.5, 0, -0.499264, 0, -0.0271266, -0.0782125, -2.44365, -9.01227 )
-script = ExtResource( 18 )
+transform = Transform( 0.49927, 0, 0.0270078, 0, 0.5, 0, -0.0270078, 0, 0.49927, 0.890323, -0.743116, 8.17991 )
+script = ExtResource( 3 )
 
 [node name="rocket_model" type="MeshInstance" parent="Rocket"]
 transform = Transform( 0.00226193, 0, -0.299991, 0, 0.3, 0, 0.299991, 0, 0.00226193, -0.153, 1.504, -0.368 )
-mesh = ExtResource( 19 )
-material/0 = SubResource( 3 )
-material/1 = SubResource( 4 )
-material/2 = SubResource( 5 )
-material/3 = SubResource( 6 )
-material/4 = SubResource( 7 )
-material/5 = SubResource( 8 )
+mesh = ExtResource( 4 )
+material/0 = SubResource( 4 )
+material/1 = SubResource( 5 )
+material/2 = SubResource( 6 )
+material/3 = SubResource( 7 )
+material/4 = SubResource( 8 )
+material/5 = SubResource( 9 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Rocket"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.42461, -0.521026 )
-shape = SubResource( 9 )
+shape = SubResource( 10 )
 
 [node name="camera" type="Spatial" parent="Rocket"]
-transform = Transform( -0.00999937, 0, -0.000112087, 0, 0.01, 0, 0.000112088, 0, -0.00999937, -0.0990066, 1.98753, -4.85589 )
+transform = Transform( -0.00999937, 0, -0.000112088, 0, 0.01, 0, 0.000112089, 0, -0.00999937, -0.628495, 1.98753, -4.88454 )
 
 [node name="InterpolatedCamera" type="InterpolatedCamera" parent="."]
-transform = Transform( 0.0329135, 0.39148, -0.919598, -0.0211541, 0.920163, 0.390964, 0.999234, 0.00658528, 0.0385672, -24.3091, 15.4104, -0.677253 )
+transform = Transform( 0.0329135, 0.39148, -0.919598, -0.0211541, 0.920163, 0.390964, 0.999234, 0.00658529, 0.0385672, -11.7022, 4.95752, 4.40183 )
 keep_aspect = 0
-environment = SubResource( 11 )
+environment = SubResource( 12 )
 current = true
 fov = 141.177
 near = 0.01
 target = NodePath("../Rocket/camera")
-speed = 5.0
+speed = 6.0
 enabled = true
+
+[node name="LaunchRocket" type="AnimationPlayer" parent="."]
+autoplay = "launch"
+anims/launch = SubResource( 14 )
