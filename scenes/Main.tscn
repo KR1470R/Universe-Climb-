@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://scripts/Main.gd" type="Script" id=1]
 [ext_resource path="res://models/map/mountain/island/clouds.dae" type="PackedScene" id=2]
@@ -41,16 +41,36 @@ albedo_texture = ExtResource( 6 )
 [sub_resource type="BoxShape" id=10]
 extents = Vector3( 1, 1.71808, 1 )
 
+[sub_resource type="Gradient" id=16]
+offsets = PoolRealArray( 0, 0.348148 )
+colors = PoolColorArray( 1, 1, 1, 1, 1, 0.222656, 0, 1 )
+
+[sub_resource type="GradientTexture" id=17]
+gradient = SubResource( 16 )
+
 [sub_resource type="ParticlesMaterial" id=14]
+render_priority = 10
 emission_shape = 2
 emission_box_extents = Vector3( 1, 1, 1 )
-angular_velocity = 1.84971e-43
+flag_disable_z = true
+gravity = Vector3( 0, -5, 0 )
+angular_velocity = 231.72
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+angle = -198.6
+scale = 2.3
+scale_random = 0.58
+color_ramp = SubResource( 17 )
+
+[sub_resource type="SpatialMaterial" id=18]
+vertex_color_use_as_albedo = true
 
 [sub_resource type="CubeMesh" id=15]
-size = Vector3( 0.3, 0.27, 0.32 )
+material = SubResource( 18 )
+size = Vector3( 0.23, 0.27, 0.18 )
 
 [sub_resource type="ProceduralSky" id=11]
-radiance_size = 0
+radiance_size = 2
 sky_top_color = Color( 0, 0.301961, 0.623529, 1 )
 sky_horizon_color = Color( 1, 0.745098, 0.286275, 1 )
 sky_energy = 2.0
@@ -58,6 +78,7 @@ ground_bottom_color = Color( 0.109804, 0.243137, 0.54902, 1 )
 ground_horizon_color = Color( 1, 0.462745, 0, 1 )
 sun_color = Color( 1, 0.584314, 0, 1 )
 sun_angle_min = 55.2
+texture_size = 0
 
 [sub_resource type="Environment" id=12]
 background_mode = 2
@@ -71,7 +92,7 @@ glow_intensity = 5.77
 
 [sub_resource type="Animation" id=13]
 resource_name = "launch"
-length = 5.0
+length = 6.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("Rocket:translation")
 tracks/0/interp = 1
@@ -103,46 +124,46 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 1, 5 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 2.1, 3.8, 8.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Color( 0, 0.301961, 0.623529, 1 ), Color( 0, 0, 0, 1 ) ]
+"values": [ Color( 0, 0.301961, 0.623529, 1 ), Color( 0, 0.301961, 0.623529, 1 ), Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 1 ) ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("InterpolatedCamera:environment:background_sky:sky_horizon_color")
+tracks/3/path = NodePath("InterpolatedCamera:environment:background_sky:ground_horizon_color")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 1, 5 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 2.5, 4.2, 8.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Color( 1, 0.745098, 0.286275, 1 ), Color( 0, 0, 0, 1 ) ]
+"values": [ Color( 1, 0.462745, 0, 1 ), Color( 1, 0.462745, 0, 1 ), Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 1 ) ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("InterpolatedCamera:environment:background_sky:ground_bottom_color")
+tracks/4/path = NodePath("InterpolatedCamera:environment:background_sky:sky_horizon_color")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 1, 5 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 2.9, 4.6, 8.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Color( 0.109804, 0.243137, 0.54902, 1 ), Color( 0, 0, 0, 1 ) ]
+"values": [ Color( 1, 0.745098, 0.286275, 1 ), Color( 1, 0.745098, 0.286275, 1 ), Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 1 ) ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("InterpolatedCamera:environment:background_sky:ground_horizon_color")
+tracks/5/path = NodePath("InterpolatedCamera:environment:background_sky:ground_bottom_color")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
 tracks/5/enabled = true
 tracks/5/keys = {
-"times": PoolRealArray( 1, 5 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 3.3, 5, 8.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Color( 1, 0.462745, 0, 1 ), Color( 0, 0, 0, 1 ) ]
+"values": [ Color( 0.109804, 0.243137, 0.54902, 1 ), Color( 0.109804, 0.243137, 0.54902, 1 ), Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 1 ) ]
 }
 tracks/6/type = "value"
 tracks/6/path = NodePath("InterpolatedCamera:environment:background_sky:ground_energy")
@@ -151,7 +172,7 @@ tracks/6/loop_wrap = true
 tracks/6/imported = false
 tracks/6/enabled = true
 tracks/6/keys = {
-"times": PoolRealArray( 0, 1, 5 ),
+"times": PoolRealArray( 0, 4.2, 10.2 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ 1.0, 1.0, 5.0 ]
@@ -220,7 +241,7 @@ shape = SubResource( 3 )
 transform = Transform( 1.34436, 0, -0.71551, 0, 2, 0, 1.698, 0, 2.26596, 8.79352, 0.386725, -12.609 )
 
 [node name="Low Poly Mill" parent="Map" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, -1.49012e-08, 0, 1, 0, 5.96046e-08, 0, 1, -0.0390007, -0.046, -18.954 )
+transform = Transform( 1, 0, -2.98023e-08, 0, 1, 0, 1.19209e-07, 0, 1, -0.0390012, -0.046, -18.954 )
 
 [node name="Rocket" type="KinematicBody" parent="."]
 transform = Transform( 0.49927, 0, 0.0270078, 0, 0.5, 0, -0.0270078, 0, 0.49927, 0.890323, -0.743116, 8.17991 )
@@ -228,7 +249,7 @@ input_ray_pickable = false
 script = ExtResource( 4 )
 
 [node name="rocket_model" type="MeshInstance" parent="Rocket"]
-transform = Transform( 0.000980168, 0, -0.299991, 0, 0.3, 0, 0.129996, 0, 0.00226193, -0.153, 1.504, -0.368 )
+transform = Transform( 0.000980169, 0, -0.299991, 0, 0.3, 0, 0.129996, 0, 0.00226193, -0.153, 1.504, -0.367994 )
 mesh = ExtResource( 5 )
 material/0 = SubResource( 4 )
 material/1 = SubResource( 5 )
@@ -242,16 +263,19 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.42461, -0.521026 )
 shape = SubResource( 10 )
 
 [node name="camera" type="Spatial" parent="Rocket"]
-transform = Transform( -0.00999937, 0, -0.000112088, 0, 0.01, 0, 0.000112089, 0, -0.00999937, -0.0990066, 1.98753, -4.85589 )
+transform = Transform( -0.00999937, 0, -0.000112089, 0, 0.01, 0, 0.000112089, 0, -0.00999937, -0.0990066, 1.98753, -4.85589 )
 
 [node name="Particles" type="Particles" parent="Rocket"]
-transform = Transform( 1, 0, 2.23517e-08, 0, 1, 0, -2.23517e-08, 0, 1, 0, 0.238866, 0 )
-visibility_aabb = AABB( -4, -6.38392, -0.692796, 8, 4.28053, 1.38559 )
+transform = Transform( 1, 0, 5.58794e-09, 0, 1, 0, -8.19564e-08, 0, 0.27, -0.0905613, -0.205646, -0.431875 )
+amount = 15
+fixed_fps = 60
+fract_delta = false
+visibility_aabb = AABB( -1.476, -6.26183, -0.693, 2.952, 6.77665, 1.386 )
 process_material = SubResource( 14 )
 draw_pass_1 = SubResource( 15 )
 
 [node name="InterpolatedCamera" type="InterpolatedCamera" parent="."]
-transform = Transform( 0.0329135, 0.39148, -0.919598, -0.0211541, 0.920163, 0.390964, 0.999234, 0.00658529, 0.0385672, -11.7022, 4.95752, 4.40183 )
+transform = Transform( 0.0329135, 0.39148, -0.919598, -0.0211541, 0.920163, 0.390964, 0.999234, 0.00658528, 0.0385672, -11.7022, 4.95752, 4.40183 )
 keep_aspect = 0
 environment = SubResource( 12 )
 current = true

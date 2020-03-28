@@ -15,6 +15,8 @@ var speed = 100
 const ACCELERATION = 3
 const DE_ACCELERAATION = 5
 
+onready var get_particles = get_node("Particles")
+
 func _ready():
 	pass
 
