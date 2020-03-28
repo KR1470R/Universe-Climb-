@@ -1,25 +1,159 @@
 # Blender MTL File: 'Low Poly Mill.blend'
-# Material Count: 12
+# Material Count: 22
 
-newmtl foliage
+newmtl Material.001
 Ns 225.000000
-Ka 1.000000 1.000000 1.000000
-Kd 0.000000 0.704082 0.258163
-Ks 0.500000 0.500000 0.500000
-Ke 0.000000 0.000000 0.000000
-Ni 1.000000
-d 1.000000
-illum 2
-
-newmtl mat_clouds
-Ns 506.250000
 Ka 1.000000 1.000000 1.000000
 Kd 0.800000 0.800000 0.800000
 Ks 0.500000 0.500000 0.500000
 Ke 0.000000 0.000000 0.000000
 Ni 1.450000
-d 0.200000
-illum 9
+d 1.000000
+illum 2
+map_Kd /home/krip/Desktop/iokjump3d/models/map/rocket_pad/Material.001 Base Color.png
+
+newmtl Material.002
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd /home/krip/Desktop/iokjump3d/models/map/rocket_pad/Material.002 Base Color.png
+
+newmtl Material.003
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd /home/krip/Desktop/iokjump3d/models/map/rocket_pad/Material.003 Base Color.png
+
+newmtl Material.004
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd /home/krip/Desktop/iokjump3d/models/map/rocket_pad/Material.004 Base Color.png
+
+newmtl Material.005
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd /home/krip/Desktop/iokjump3d/models/map/rocket_pad/Material.005 Base Color.png
+
+newmtl Material.006
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd /home/krip/Desktop/iokjump3d/models/map/rocket_pad/Material.006 Base Color.png
+
+newmtl Material.007
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd /home/krip/Desktop/iokjump3d/models/map/rocket_pad/Material.007 Base Color.png
+
+newmtl Material.008
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd /home/krip/Desktop/iokjump3d/models/map/rocket_pad/Material.008 Base Color.png
+
+newmtl Material.009
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd /home/krip/Desktop/iokjump3d/models/map/rocket_pad/Material.009 Base Color.png
+
+newmtl Material.010
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd /home/krip/Desktop/iokjump3d/models/map/rocket_pad/Material.010 Base Color.png
+
+newmtl Material.011
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd /home/krip/Desktop/iokjump3d/models/map/rocket_pad/Material.011 Base Color.png
+
+newmtl Material.012
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd /home/krip/Desktop/iokjump3d/models/map/rocket_pad/Material.012 Base Color.png
+
+newmtl Material.013
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd /home/krip/Desktop/iokjump3d/models/map/rocket_pad/Material.013 Base Color.png
+
+newmtl Material.014
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd /home/krip/Desktop/iokjump3d/models/map/rocket_pad/Material.014 Base Color.png
 
 newmtl mat_lowpoly_water_001
 Ns 506.250000
@@ -102,23 +236,3 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 0.972089
 illum 9
-
-newmtl platform
-Ns 225.000000
-Ka 1.000000 1.000000 1.000000
-Kd 0.005998 0.785714 0.005998
-Ks 0.500000 0.500000 0.500000
-Ke 0.000000 0.000000 0.000000
-Ni 1.000000
-d 1.000000
-illum 2
-
-newmtl wood
-Ns 225.000000
-Ka 1.000000 1.000000 1.000000
-Kd 0.326531 0.169497 0.012463
-Ks 0.500000 0.500000 0.500000
-Ke 0.000000 0.000000 0.000000
-Ni 1.000000
-d 1.000000
-illum 2
