@@ -1,0 +1,68 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://models/asteroids/asteroid_proj.obj" type="ArrayMesh" id=1]
+
+[sub_resource type="Gradient" id=1]
+offsets = PoolRealArray( 0.555556, 0.888889 )
+colors = PoolColorArray( 1, 0.457031, 0, 1, 1, 0.93967, 0.888889, 1 )
+
+[sub_resource type="GradientTexture" id=2]
+gradient = SubResource( 1 )
+
+[sub_resource type="ParticlesMaterial" id=3]
+emission_shape = 2
+emission_box_extents = Vector3( 1, 1, 1 )
+flag_align_y = true
+flag_rotate_y = true
+flag_disable_z = true
+gravity = Vector3( 0.95, 6.01, -5.2 )
+angular_velocity = 0.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+linear_accel = 2.0
+scale = 3.0
+scale_random = 1.0
+color_ramp = SubResource( 2 )
+
+[sub_resource type="SpatialMaterial" id=4]
+vertex_color_use_as_albedo = true
+vertex_color_is_srgb = true
+
+[sub_resource type="CubeMesh" id=5]
+material = SubResource( 4 )
+size = Vector3( 0.5, 0.5, 0.5 )
+
+[sub_resource type="Animation" id=6]
+resource_name = "color_meteor"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:mesh:surface_1/material:albedo_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0.690196, 0.690196, 0.690196, 1 ), Color( 1, 0.372549, 0.372549, 1 ), Color( 0.690196, 0.690196, 0.690196, 1 ) ]
+}
+
+[node name="Meteor" type="Spatial"]
+
+[node name="asteroid_proj" type="MeshInstance" parent="."]
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="Particles" type="Particles" parent="asteroid_proj"]
+amount = 10
+speed_scale = 1.5
+visibility_aabb = AABB( -1.14391, -4, -1.19983, 2.28782, 8, 2.39965 )
+process_material = SubResource( 3 )
+draw_pass_1 = SubResource( 5 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="asteroid_proj"]
+autoplay = "color_meteor"
+anims/color_meteor = SubResource( 6 )
+
+[node name="DirectionalLight" type="DirectionalLight" parent="asteroid_proj"]
